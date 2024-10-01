@@ -45,8 +45,8 @@ class BankAccount {
                 cout<<"Current balance is lower than the minimum balance"<<endl;
             }
         }
-        void giveInterest(){
-            double interest=current_balance*0.03;
+        void giveInterest(float val=0.03){
+            double interest=current_balance*val;
             tax+=interest*0.1;
             current_balance+=interest*0.9;
         }
@@ -85,6 +85,7 @@ int main(){
     b1.showBalance();
     b1.giveInterest();
     b1.show();
+    b1.~
     display_stat();
     b2.destroy();
     display_stat();
